@@ -64,6 +64,7 @@ def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
     """
+    print("compare:"+a+","+b)
     return a > b
 
 
@@ -77,6 +78,7 @@ def bsort(seq, cmp):
     while not sorted:
         sorted = True   # assume it's already sorted correctly
         for index, value in enumerate(seq): # for every element in seq
+            print(value)
             if index > 0:                   # past the first..
                 if not cmp(seq[index-1], value):  # if this element is out of order
                     sorted = False          # then the list is not sorted yet
