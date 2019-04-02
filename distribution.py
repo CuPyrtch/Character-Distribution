@@ -1,9 +1,9 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: CuPyrtch
+Credit: None
 
-Assignment:
+Assignment:Character Distribution
 
 Write and submit a Python program (distribution.py) that computes and displays 
 the distribution of characters in a given sample of text.
@@ -39,4 +39,24 @@ Notice about this example:
 
 input1=input("Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in \"" + input1 + "\" is: ")
+
+sentence = input1.lower()
+counts = []
+letters = []
+for i in range(97, 123):
+    count = sentence.count(chr(i))
+    if count > 0:
+        counts.append(count)
+        letters.append(chr(i))
+answer = list(zip(counts, letters))
+answer.sort(reverse=True)
+
+for i in range(0, len(answer)):
+    tuple = answer[i]
+    line = ""
+    for j in range(0, tuple[0]):
+        line = line + tuple[1]
+    print(line)
+
+
 
