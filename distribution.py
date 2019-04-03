@@ -49,7 +49,8 @@ for i in range(97, 123):
         counts.append(count)
         letters.append(chr(i))
 answer = list(zip(counts, letters))
-answer.sort(reverse=True)
+""" answer.sort(reverse=True)
+"""
 
 for i in range(0, len(answer)):
     tuple = answer[i]
@@ -63,9 +64,11 @@ for i in range(0, len(answer)):
 def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
+    
     """
-    print("compare:"+a+","+b)
-    return a > b
+    retval = a > b
+    print("compare:"+str(a)+","+str(b),"=",retval)
+    return retval
 
 
 def bsort(seq, cmp):
