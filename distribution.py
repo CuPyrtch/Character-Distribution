@@ -49,8 +49,7 @@ for i in range(97, 123):
         counts.append(count)
         letters.append(chr(i))
 answer = list(zip(counts, letters))
-""" answer.sort(reverse=True)
-"""
+answer.sort(reverse=True)
 
 for i in range(0, len(answer)):
     tuple = answer[i]
@@ -70,9 +69,9 @@ def compare(a, b):
     compare:(5, 'a'),(3, 's') = True
     compare:(3, 's'),(3, 't') = True
     compare:(2, 'p'),(2, 'l') = False
-    retval = a > b or ((a[0] == b[0] and (a[1] < b[1]))
-    """
     retval = a>b
+    """
+    retval = a > b or ((a[0] == b[0]) and (a[1] < b[1]))
     print("compare:"+str(a)+","+str(b),"=",retval)
     return retval
 
