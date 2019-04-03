@@ -66,7 +66,7 @@ def compare(a, b):
     compare - generic comparison function for testing two elements.
     
     """
-    retval = a > b
+    retval = a > b or ((a[0] == b[0] and (a[1] < b[1]))
     print("compare:"+str(a)+","+str(b),"=",retval)
     return retval
 
