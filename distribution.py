@@ -63,8 +63,13 @@ for i in range(0, len(answer)):
 
 def compare(a, b):
     """
-    compare - generic comparison function for testing two elements.
-    
+    compare - generic comparison function for testing two tupes.
+    return true if a > b
+    a > b if the a[0] > b[0]
+    of if a[0] == b[0] and a[1] < b[1]
+    compare:(5, 'a'),(3, 's') = True
+    compare:(3, 's'),(3, 't') = True
+    compare:(2, 'p'),(2, 'l') = False
     """
     retval = a > b or ((a[0] == b[0] and (a[1] < b[1]))
     print("compare:"+str(a)+","+str(b),"=",retval)
