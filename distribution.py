@@ -70,8 +70,9 @@ def compare(a, b):
     compare:(5, 'a'),(3, 's') = True
     compare:(3, 's'),(3, 't') = True
     compare:(2, 'p'),(2, 'l') = False
-    """
     retval = a > b or ((a[0] == b[0] and (a[1] < b[1]))
+    """
+    retval = a>b
     print("compare:"+str(a)+","+str(b),"=",retval)
     return retval
 
@@ -86,12 +87,12 @@ def bsort(seq, cmp):
     while not sorted:
         sorted = True   # assume it's already sorted correctly
         for index, value in enumerate(seq): # for every element in seq
-            print(value)
+            """ print(value) """
             if index > 0:                   # past the first..
                 if not cmp(seq[index-1], value):  # if this element is out of order
                     sorted = False          # then the list is not sorted yet
                     seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
 
-print("sort this:"+answer)
+print("sort this:"+str(answer))
 bsort(answer, compare)
 print(answer)
