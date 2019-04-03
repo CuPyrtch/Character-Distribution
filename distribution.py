@@ -92,6 +92,6 @@ def bsort(seq, cmp):
                     sorted = False          # then the list is not sorted yet
                     seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
 
-    
+print("sort this:"+answer)
 bsort(answer, compare)
 print(answer)
