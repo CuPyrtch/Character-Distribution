@@ -49,14 +49,8 @@ for i in range(97, 123):
         counts.append(count)
         letters.append(chr(i))
 answer = list(zip(counts, letters))
-answer.sort(reverse=True)
 
-for i in range(0, len(answer)):
-    tuple = answer[i]
-    line = ""
-    for j in range(0, tuple[0]):
-        line = line + tuple[1]
-    print(line)
+
 
 
 
@@ -71,8 +65,8 @@ def compare(a, b):
     compare:(2, 'p'),(2, 'l') = False
     retval = a>b
     """
-    retval = a > b or ((a[0] == b[0]) and (a[1] < b[1]))
-    print("compare:"+str(a)+","+str(b),"=",retval)
+    retval = a[0] > b[0] or ((a[0] == b[0]) and (a[1] < b[1]))
+    """ print("compare:"+str(a)+","+str(b),"=",retval) """
     return retval
 
 
@@ -94,4 +88,10 @@ def bsort(seq, cmp):
 
 print("sort this:"+str(answer))
 bsort(answer, compare)
-print(answer)
+
+for i in range(0, len(answer)):
+    tuple = answer[i]
+    line = ""
+    for j in range(0, tuple[0]):
+        line = line + tuple[1]
+    print(line)
